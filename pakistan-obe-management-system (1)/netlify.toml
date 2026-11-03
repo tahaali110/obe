@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["vite"]
+
+# Route all /api/* requests to Netlify serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# Route documentation PDF downloads through backend function
+[[redirects]]
+  from = "/OBE_System_*.pdf"
+  to = "/.netlify/functions/api"
+  status = 200
+
+# Client-side routing fallback for React Single Page Application
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

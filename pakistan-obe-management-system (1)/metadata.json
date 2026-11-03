@@ -1,0 +1,6 @@
+{
+  "name": "Pakistan OBE Management System",
+  "description": "Outcome-Based Education (OBE) Management System for Pakistani Higher Education Institutions, compliant with HEC, NCEAC 2023, and PEC accreditation standards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
